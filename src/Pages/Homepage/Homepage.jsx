@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousal from "../../Components/Homepage/Carousal";
 import Carousal2 from "../../Components/Homepage/Carousal2";
 import Poadcast from "../../Components/Homepage/Poadcast";
 import Navbar from "../../Components/Homepage/Navbar";
 import Banner from "../../Components/Homepage/Banner";
+import Progressbar from "../../Components/Common/Progressbar";
 import "./Homepage.css";
 
 const Homepage = () => {
+  useEffect(() => {
+    document.title = "Web page";
+  }, []);
+
   return (
     <div className="">
+      <Progressbar />
       <div style={{ position: "relative" }}>
         <video
           autoPlay
